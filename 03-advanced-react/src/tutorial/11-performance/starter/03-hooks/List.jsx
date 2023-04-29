@@ -1,0 +1,14 @@
+import Item from "./Person";
+// import React.memo()
+import { memo } from "react";
+
+const List = ({ people }) => {
+  return (
+    <div>
+      {people.map((person) => {
+        return <Item key={person.id} {...person} />;
+      })}
+    </div>
+  );
+};
+export default memo(List);
